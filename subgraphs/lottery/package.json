@@ -1,0 +1,15 @@
+{
+  "name": "lottery",
+  "description": "Safemoon Subgraph",
+  "version": "1.0.0",
+  "repository": "git@github.com:salmanbao/safemoon-subgraph.git",
+  "author": "Safemoon",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "codegen": "graph codegen subgraph.yaml",
+    "build": "graph build subgraph.yaml",
+    "auth": "graph auth  --studio 1e1eef8280918e7dfa7d0b08dfdff747",
+    "deploy:studio":"graph deploy --studio safemoon-lottery",
+    "deploy": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/lottery subgraph.yaml"
+  }
+}
